@@ -1,0 +1,36 @@
+/* Common styles for both light and dark modes */
+:root {
+	--background-color-light: #ffffff;
+	--text-color-light: #000000;
+	--background-color-dark: #333333;
+	--text-color-dark: #ffffff;
+	--transition-duration: 0.5s; /* Animation duration */
+}
+
+/* Light mode styles */
+body:not(.dark-mode) {
+	background-color: var(--background-color-light);
+	color: var(--text-color-light);
+	transition: background-color var(--transition-duration),
+		color var(--transition-duration);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+	background-color: var(--background-color-dark);
+	color: var(--text-color-dark);
+	transition: background-color var(--transition-duration),
+		color var(--transition-duration);
+}
+
+/* Textarea styles for light mode */
+.textarea-light {
+	background-color: var(--background-color-light);
+	color: var(--text-color-light);
+}
+
+/* Textarea styles for dark mode */
+.textarea-dark {
+	background-color: var(--background-color-dark);
+	color: var(--text-color-dark);
+}
